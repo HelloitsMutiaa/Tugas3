@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas 3</title>
+    <style>
+        fieldset {
+            margin: 30px 200px 0px 400px;
+            width: 40%;
+            border-radius: 20px;
+            height: 120px;
+            padding: 50px 0px 30px 0px;
+            border: 3px solid rgb(245, 245, 124);
+        }
+        button {
+           border-radius: 25px;
+           height: 40px;
+           width: 50px;
+           background-color:darkolivegreen;
+       }
+       button:hover {
+           background-color:darkolivegreen;
+           text-transform: uppercase;
+           font-stretch: wider;
+           border-color:darkolivegreen;
+           border-color:darkolivegreen;
+       }
+       button:active {
+           background-color:rgb(204, 243, 125);
+           border-color:rgb(204, 243, 125);
+       }
+       input {
+           border-radius: 20px;
+           background-color: rgb(219, 247, 170);
+           width: 200px;
+       }
+       h1 {
+           margin-top: 10%;
+           letter-spacing: 5px;
+           font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+           font-weight: bolder;
+       }
+       body {
+           background-image: url(gb.jpg);
+           background-size: cover;
+       }
+    </style>
+</head>
+<body>
+    <h1 style="color: rgb(245, 245, 124);" align="center"><b><u>OPERASI MATEMATIKA</u></b></h1><br/>
+    <fieldset>
+    <form>
+    <table align="center">
+        <tr>
+            <td width="200px" style="color: #ffffff;"><b>Bilangan 1</b></td>
+            <td><input type="number" id="f1"></td>
+        </tr>
+        <tr>
+            <td width="250px" style="color: #ffffff;"><b>Bilangan 2</b></td>
+            <td><input type="number" id="f2"></td>
+        </tr>
+        <tr>
+            <td style="color: #ffffff;"><b><h4>Hasil</h4></b></td>
+            <td><input type="number" id="c"></td>
+        </tr>
+    </table>
+    <p align="center">
+    <button type="button" onclick="tambah();"><b>+</b></button>
+    <button type="button" onclick="kurang();"><b>-</b></button>
+    <button type="button" onclick="kali();"><b>x</b></button>
+    <button type="button" onclick="bagi();"><b>/</b></button></p>
+    </form>
+    </fieldset>
+    <script type="text/javascript">
+        function tambah() {
+            let a = document.getElementById("f1").value;
+            let b = document.getElementById("f2").value;
+            let c = parseInt(a) + parseInt(b);
+
+            alert(a+" + "+b+" = "+c)
+
+            document.getElementById("c").value=c;
+        }
+        function kurang() {
+            let a = document.getElementById("f1").value;
+            let b = document.getElementById("f2").value;
+            let c = parseInt(a) - parseInt(b);
+
+            alert(a+" - "+b+" = "+c)
+
+            document.getElementById("c").value=c;
+        }
+        function kali() {
+            let a = document.getElementById("f1").value;
+            let b = document.getElementById("f2").value;
+            let c = parseInt(a) * parseInt(b);
+
+            alert(a+" x "+b+" = "+c)
+
+            document.getElementById("c").value=c;
+        }
+        function bagi() {
+            let a = document.getElementById("f1").value;
+            let b = document.getElementById("f2").value;
+            let c = parseInt(a) / parseInt(b);
+
+            alert(a+" : "+b+" = "+c)
+
+            document.getElementById("c").value=c;
+        }
+    </script>
+</body>
+</html>
